@@ -51,16 +51,17 @@ const IconList = () => {
   if (!isClient) return null;
 
   const classNamesList = [
-    "-top-20 -left-10",
-    "-top-20 -right-10",
-    "top-44 -right-40",
-    "top-44 -left-40",
-    "-bottom-20 -left-10",
-    "-bottom-20 -right-10",
+    "-top-16 left-7",
+    "-top-16 right-7",
+    "top-44 -right-28 md:block hidden",
+    "top-44 -left-28 md:block hidden",
+    "-bottom-12 left-7",
+    "-bottom-12 right-7",
   ];
 
   return (
     <>
+      <div className="-right-2"></div>
       {icons.map((iconObj, index) => (
         <HomePageIcon
           key={iconObj.id}
