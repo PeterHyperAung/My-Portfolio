@@ -129,5 +129,5 @@
 
 body {
   width: 100vw !important;
-  overflow: hidden;
+  overflow-x: hidden;
 }

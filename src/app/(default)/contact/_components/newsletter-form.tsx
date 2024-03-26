@@ -16,7 +16,7 @@ const NewsLetterForm = () => {
   });
 
   return (
-    <div className="p-5 shadow-md w-[600px]">
+    <div className="border rounded-md p-5 shadow-md w-[600px]">
       <h3 className="text-xl font-bold mb-5">
         Subscribe email to join my newsletter
       </h3>

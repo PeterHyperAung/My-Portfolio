@@ -18,13 +18,11 @@ export default function ContactForm() {
     },
   });
 
-  console.log(formState);
-
   return (
     <>
       <form
         action={action}
-        className="border rounded-md shadow lg:w-[600px] md:w-[450px] w-[300px] p-5"
+        className="border rounded-md shadow lg:w-[600px] md:w-[450px] w-[300px] p-5 mb-5"
       >
         <div className="mb-3 text-center">
           <h3 className="font-bold text-xl">Message Form</h3>

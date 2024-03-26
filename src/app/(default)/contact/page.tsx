@@ -5,9 +5,9 @@ import { db } from "@/db";
 
 export default async function ContactPage() {
   return (
-    <div className="py-16 px-10 h-[90vh]">
+    <div className="py-10 px-10 h-[90vh]">
       <h2 className="text-2xl font-bold text-center mb-10">Contact Me</h2>
-      <div className="grid grid-cols-2 items-center gap-10">
+      <div className="flex justify-center flex-wrap gap-10">
         <div className="col-span-1 justify-self-end">
           <div className="mb-10">
             <SocialInfoCard />
