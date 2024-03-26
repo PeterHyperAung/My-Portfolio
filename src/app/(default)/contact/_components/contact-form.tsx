@@ -1,11 +1,9 @@
 "use client";
-import { useCallback, useState } from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { useFormState } from "react-dom";
 import * as actions from "@/actions";
-import ContactFormButton from "./contact-form-button";
-import Toast from "@/components/toast/toast";
+import ContactFormButtonWithToast from "./contact-form-button-with-toast";
 
 export default function ContactForm() {
   const [formState, action] = useFormState(actions.createContactMessageAction, {
@@ -19,15 +17,8 @@ export default function ContactForm() {
       message: "",
     },
   });
-  const [toastVisibility, setToastVisibility] = useState(
-    formState.success.status
-  );
 
   console.log(formState);
-
-  const hideToast = useCallback(function () {
-    setToastVisibility(false);
-  }, []);
 
   return (
     <>
@@ -98,13 +89,12 @@ export default function ContactForm() {
         </div>
 
         <div className="flex justify-center items-center">
-          <ContactFormButton onClick={() => setToastVisibility(true)} />
+          <ContactFormButtonWithToast
+            successStatus={formState.success.status}
+            toastMessage={formState.success.message}
+          />
         </div>
       </form>
-
-      {toastVisibility && formState.success.status ? (
-        <Toast message={formState.success.message} hideToast={hideToast} />
-      ) : null}
     </>
   );
 }

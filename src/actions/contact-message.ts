@@ -61,9 +61,11 @@ export const createContactMessageAction = async (
         },
       };
     } else {
-      await db.contactMessage.create({
-        data: formValidity.data,
-      });
+      // await db.contactMessage.create({
+      //   data: formValidity.data,
+      // });
+
+      await new Promise((res) => setTimeout(res, 3000));
 
       return {
         error: {},

@@ -1,15 +1,7 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Image from "next/image";
 import MyImage from "@/images/me.jpg";
-import HomePageIcon from "@/app/(default)/_components/homepage/homepage-icon";
-import {
-  NodejsOriginal,
-  ReactOriginal,
-  LaravelOriginal,
-  NextjsOriginal,
-  JavascriptOriginal,
-  TypescriptOriginal,
-} from "devicons-react";
+import IconList from "./IconList";
 
 import { Button } from "@/components/ui/button";
 
@@ -33,36 +25,7 @@ const HeroSection = () => {
         </div>
 
         <Button>Download CV</Button>
-        <HomePageIcon
-          Icon={NodejsOriginal}
-          className="-top-20 -left-10"
-          index={0}
-        />
-        <HomePageIcon
-          Icon={TypescriptOriginal}
-          className="-top-20 -right-10"
-          index={2}
-        />
-        <HomePageIcon
-          Icon={JavascriptOriginal}
-          className="top-44 -right-40"
-          index={2}
-        />
-        <HomePageIcon
-          Icon={NextjsOriginal}
-          className="top-44 -left-40"
-          index={3}
-        />
-        <HomePageIcon
-          Icon={ReactOriginal}
-          className="-bottom-20 -left-10"
-          index={4}
-        />
-        <HomePageIcon
-          Icon={LaravelOriginal}
-          className="-bottom-20 -right-10"
-          index={5}
-        />
+        <IconList />
       </div>
     </div>
   );

@@ -1,11 +1,8 @@
 "use client";
-import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import Toast from "@/components/toast/toast";
 import * as actions from "@/actions";
 import { useFormState } from "react-dom";
-import ContactFormButton from "./contact-form-button";
+import ContactFormButtonWithToast from "./contact-form-button-with-toast";
 
 const NewsLetterForm = () => {
   const [formState, action] = useFormState(actions.createNewsLetter, {
@@ -17,8 +14,6 @@ const NewsLetterForm = () => {
       message: "",
     },
   });
-
-  const [toastVisibility, setToastVisibility] = useState(false);
 
   return (
     <div className="p-5 shadow-md w-[600px]">
@@ -36,7 +31,10 @@ const NewsLetterForm = () => {
                 : null
             }`}
           />
-          <ContactFormButton onClick={() => setToastVisibility(true)} />
+          <ContactFormButtonWithToast
+            successStatus={formState.success.status}
+            toastMessage={formState.success.message}
+          />
         </form>
         {formState?.error?.email?.length !== 0 ? (
           <div className="text-red-400 mt-2 text-sm">
@@ -44,12 +42,6 @@ const NewsLetterForm = () => {
           </div>
         ) : null}
       </div>
-      {toastVisibility && formState.success.status ? (
-        <Toast
-          hideToast={() => setToastVisibility(false)}
-          message={formState.success.message}
-        />
-      ) : null}
     </div>
   );
 };

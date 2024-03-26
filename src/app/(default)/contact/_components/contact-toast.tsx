@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
+import { useFormStatus } from "react-dom";
 import { FiCheckCircle, FiAlertCircle } from "react-icons/fi";
 
 type ToastProps = {
@@ -7,7 +8,7 @@ type ToastProps = {
   hideToast: () => void;
 };
 
-const Toast = ({ message = "Success!", hideToast }: ToastProps) => {
+const ContactToast = ({ message = "Success!", hideToast }: ToastProps) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       hideToast();
@@ -26,4 +27,4 @@ const Toast = ({ message = "Success!", hideToast }: ToastProps) => {
   );
 };
 
-export default Toast;
+export default ContactToast;
