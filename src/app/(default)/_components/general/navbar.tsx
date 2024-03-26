@@ -130,15 +130,15 @@ export default function Navbar() {
           <FiHome size={20} />
           Home
         </MobileNavItem>
-        <MobileNavItem href="/">
+        <MobileNavItem href="/skills">
           <FiBarChart2 size={20} />
           Skills
         </MobileNavItem>
-        <MobileNavItem href="/">
+        <MobileNavItem href="/education">
           <FiBookOpen size={20} />
           Education
         </MobileNavItem>
-        <MobileNavItem href="/">
+        <MobileNavItem href="/projects">
           <FiBox size={20} />
           Projects
         </MobileNavItem>
