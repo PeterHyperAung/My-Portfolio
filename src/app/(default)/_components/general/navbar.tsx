@@ -39,23 +39,12 @@ const components: { title: string; href: string; description: string }[] = [
     description:
       "Backend API development with technologies like Node.js, Laravel, Express.js",
   },
-  {
-    title: "Cross Platform Mobile Development",
-    href: "skills/#mobile",
-    description: "Cross platform mobile development with React Native. ",
-  },
-  {
-    title: "Web Security",
-    href: "skills/#web-security",
-    description:
-      "Basic level understanding of web security and common attacks like csrf, file inclusion, etc.",
-  },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="flex mx-0 md:mx-3 lg:mx-10 rounded bg-slate-200 shadow p-3 px-4 pr-3 sm:px-6 sticky top-0 md:top-3 justify-between items-center">
+    <nav className="flex mx-0 md:mx-3 lg:mx-10 rounded bg-slate-200 shadow p-3 px-4 pr-3 sm:px-6 sticky top-0 md:top-3 justify-between items-center z-10">
       <span className="font-black text-xl">Peter&apos;s Web</span>
       <NavigationMenu className="md:flex hidden">
         <NavigationMenuList>
@@ -74,7 +63,7 @@ export default function Navbar() {
               Skills
             </NavigationMenuTrigger>
             <NavigationMenuContent className="z-999">
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[575px]">
+              <ul className="grid w-[250px] gap-3 p-4 md:w-[300px] md:grid-cols-1 lg:w-[390px]">
                 {components.map((component) => (
                   <ListItem
                     key={component.title}

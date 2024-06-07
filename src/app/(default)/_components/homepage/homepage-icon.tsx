@@ -15,7 +15,7 @@ export default function HomePageIcon({
 }: HomePageIconProps) {
   return (
     <Icon
-      className={`absolute ${className} drop-shadow-lg animate-bounce-soft animation-delay-${index} -z-10`}
+      className={`absolute ${className} drop-shadow-lg animate-bounce-soft animation-delay-${index} -z-20`}
       size={40}
     />
   );
