@@ -1,15 +1,21 @@
 import React from "react";
 
 import type { EducationTimelineInfo } from "../page";
+import EducationTimelineElement from "./edu-timeline-element";
 
 const EducationTimeline = ({
-  educationInfo,
+  educationInfos,
 }: {
-  educationInfo: EducationTimelineInfo;
+  educationInfos: EducationTimelineInfo[];
 }) => {
   return (
-    <div className="h-[800px]">
-      <div className="h-[80%] w-1 bg-black rounded-full"></div>
+    <div className="relative">
+      <div className="h-[97%] w-1 bg-slate-700 rounded-full absolute top-[50%] -translate-y-[50%] -z-10"></div>
+      <div>
+        {educationInfos.map((info) => (
+          <EducationTimelineElement key={info.title} {...info} />
+        ))}
+      </div>
     </div>
   );
 };
