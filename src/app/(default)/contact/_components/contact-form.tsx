@@ -22,7 +22,7 @@ export default function ContactForm() {
     <>
       <form
         action={action}
-        className="border rounded-md shadow lg:w-[600px] md:w-[450px] sm:w-[400px] w-[320px] p-5 mb-5"
+        className="border rounded-md shadow lg:w-[600px] md:w-[450px] sm:w-[400px] w-[90vw] min-w-[320px] p-5 mb-5"
       >
         <div className="mb-3 text-center">
           <h3 className="font-bold text-xl">Message Form</h3>
