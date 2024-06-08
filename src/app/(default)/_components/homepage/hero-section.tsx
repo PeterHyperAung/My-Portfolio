@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col justify-center items-center min-h-[90vh]">
+    <div className="flex flex-col justify-center items-center min-h-[87vh]">
       <div className="relative flex flex-col justify-center items-center gap-5">
         <Image
           src={MyImage}

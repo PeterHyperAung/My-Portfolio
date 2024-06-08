@@ -34,11 +34,24 @@ const educationInfos = [
       </ul>
     ),
   },
+  {
+    title: "Secondary 2, Concept X International School",
+    date: "2022 Mar - 2022 Dec",
+    content: (
+      <ul className="list-disc list-inside">
+        <li>Got an outstanding student award</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Grade 1 to Grade 8, BEHS 4 Pazundaung",
+    date: "2012 - 2020",
+  },
 ];
 
 const EducationPage = (props: Props) => {
   return (
-    <div className="md:max-w-[560px] sm:max-w-[520px] max-w-[320px] xl:mt-12 mt-10 mx-auto mb-10">
+    <div className="md:max-w-[560px] sm:max-w-[520px] max-w-[320px] xl:mt-12 mt-10 mx-auto mb-10 min-h-[77vh]">
       <div>
         <h2 className="text-2xl font-bold text-center mb-12">Education</h2>
       </div>

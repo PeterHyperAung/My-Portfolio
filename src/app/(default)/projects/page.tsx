@@ -66,7 +66,7 @@ export type Project = {
 
 const ProjectsPage = () => {
   return (
-    <div className="xl:max-w-[1200px] md:max-w-[700px] sm:max-w-[400px] max-w-[320px] xl:mt-12 mt-10 mx-auto mb-10">
+    <div className="xl:max-w-[1200px] md:max-w-[700px] sm:max-w-[400px] max-w-[320px] xl:mt-12 mt-10 mx-auto mb-10 min-h-[87vh]">
       <div>
         <h2 className="text-2xl font-bold text-center mb-12">My Projects</h2>
       </div>

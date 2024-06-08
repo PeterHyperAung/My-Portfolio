@@ -58,10 +58,12 @@ export default function Navbar() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuTrigger>
-              <FiBarChart2 size={16} className="mr-1" />
-              Skills
-            </NavigationMenuTrigger>
+            <Link href="/skills" legacyBehavior passHref>
+              <NavigationMenuTrigger>
+                <FiBarChart2 size={16} className="mr-1" />
+                Skills
+              </NavigationMenuTrigger>
+            </Link>
             <NavigationMenuContent className="z-999">
               <ul className="grid w-[250px] gap-3 p-4 md:w-[300px] md:grid-cols-1 lg:w-[390px]">
                 {components.map((component) => (
