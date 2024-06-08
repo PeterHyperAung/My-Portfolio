@@ -22,6 +22,7 @@ const ContactFormButtonWithToast = ({
         type="submit"
         disabled={pending}
         onClick={() => setToastVisibility(true)}
+        className="hover:bg-gray-800"
       >
         Send
       </Button>
