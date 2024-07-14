@@ -2,6 +2,7 @@ import React from "react";
 import ProgressBarItem from "./_components/progress-bar-item";
 import {
   Css3Original,
+  DockerPlain,
   GoPlain,
   Html5Original,
   JavascriptOriginal,
@@ -10,7 +11,6 @@ import {
   NodejsOriginal,
   PhpOriginal,
   ReactOriginal,
-  SqldeveloperOriginal,
   SqldeveloperPlain,
   TypescriptOriginal,
 } from "devicons-react";
@@ -78,6 +78,12 @@ const backendSkills = [
     color: "#AFADAD",
     Icon: SqldeveloperPlain,
     title: "SQL",
+  },
+  {
+    progress: 40,
+    color: "#2496ED",
+    Icon: DockerPlain,
+    title: "Containerization",
   },
   {
     progress: 40,
