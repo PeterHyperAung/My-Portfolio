@@ -83,7 +83,7 @@ const backendSkills = [
     progress: 40,
     color: "#2496ED",
     Icon: DockerPlain,
-    title: "Containerization",
+    title: "Docker",
   },
   {
     progress: 40,
